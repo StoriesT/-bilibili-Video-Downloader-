@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>使用说明 - Bilibili 高清下载器</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <h1>Bilibili 高清下载器</h1>
+      <a class="help-link" href="/">← 返回下载</a>
+    </div>
+  </header>
+
+  <main class="container single">
+    <section class="card disclaimer">
+      <h2>⚠️ 温馨提示与免责声明</h2>
+      <ul class="disclaimer-list">
+        <li>本项目仅供个人学习、研究或存档使用，严禁用于任何商业用途！</li>
+        <li>请支持正版，尊重创作者的劳动成果。</li>
+        <li>部分受版权保护、加密或限时的免费视频也可能无法下载。</li>
+        <li>因使用本服务产生的任何法律责任，由使用者自行承担。开始下载即表示同意此声明。</li>
+      </ul>
+      <p class="disclaimer-thanks">💖 感谢理解与支持，祝您生活愉快！</p>
+    </section>
+
+    <section class="card">
+      <h2>使用说明</h2>
+      <ol class="steps">
+        <li><strong>启动</strong>：双击运行本程序，浏览器会自动打开操作页面。</li>
+        <li><strong>登录</strong>：用手机 B 站 App 扫描页面上的二维码并确认。</li>
+        <li><strong>下载</strong>：粘贴视频链接（每行一个，支持批量），点击「开始下载」。</li>
+        <li><strong>查看</strong>：下载完成后，点击「打开下载文件夹」，视频保存在系统的「下载」文件夹里。</li>
+      </ol>
+
+      <h3>画质说明</h3>
+      <div class="tier">
+        <div class="tier-row"><span class="tag off">未登录</span>最高只能下载 720P</div>
+        <div class="tier-row"><span class="tag login">已登录</span>解锁 1080P</div>
+        <div class="tier-row"><span class="tag vip">大会员</span>解锁 1080P+ / 4K 内容</div>
+      </div>
+
+      <h3>常见问题</h3>
+      <div class="faq">
+        <p><strong>登录状态会保留吗？</strong>会。登录信息保存在本机（C:\ProgramData\BilibiliVideoDownloader），重启后无需重复扫码；过期后才需要重新扫。</p>
+        <p><strong>为什么有些视频没有 4K？</strong>4K/8K 画质取决于视频本身是否提供，且需要大会员账号。</p>
+        <p><strong>下载的视频是什么格式？</strong>自动选择最高画质的视频流和音频流，合并输出为 MP4。</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>开源软件声明</h2>
+      <p class="hint">本软件使用了以下开源软件，特此声明并致谢：</p>
+
+      <table class="licenses">
+        <tr>
+          <th>组件</th>
+          <th>用途</th>
+          <th>许可证</th>
+        </tr>
+        <tr>
+          <td>FFmpeg</td>
+          <td>视频与音频合并</td>
+          <td>GPL v3</td>
+        </tr>
+        <tr>
+          <td>yt-dlp</td>
+          <td>视频解析与下载</td>
+          <td>The Unlicense（公有领域）</td>
+        </tr>
+        <tr>
+          <td>qrcode-generator</td>
+          <td>二维码生成</td>
+          <td>MIT</td>
+        </tr>
+        <tr>
+          <td>Python</td>
+          <td>运行环境</td>
+          <td>Python Software Foundation License</td>
+        </tr>
+      </table>
+
+      <div class="license-note">
+        <p><strong>FFmpeg（GPL v3）</strong>：本软件以独立进程方式调用 FFmpeg。FFmpeg 采用 GNU GPL v3 许可，
+        其完整许可证文本随本软件一同分发（见 ffmpeg 目录下的 LICENSE 文件）。如需获取 FFmpeg 对应版本的完整源代码，
+        请访问：<a href="https://github.com/FFmpeg/FFmpeg/commit/bf1b838f2a" target="_blank" rel="noopener">https://github.com/FFmpeg/FFmpeg/commit/bf1b838f2a</a>，
+        或联系软件分发者索取。</p>
+        <p><strong>yt-dlp（The Unlicense）</strong>：已进入公有领域，可自由使用、修改与再分发。项目地址：
+        <a href="https://github.com/yt-dlp/yt-dlp" target="_blank" rel="noopener">https://github.com/yt-dlp/yt-dlp</a>。</p>
+        <p><strong>qrcode-generator（MIT）</strong>：Copyright (c) 2006 Kazuhiko Arase，依 MIT 许可证分发，允许自由使用、
+        复制、修改与再分发，但需保留上述版权声明。</p>
+        <p><strong>Python（PSF License）</strong>：Copyright (c) 2001-2023 Python Software Foundation，依 Python Software
+        Foundation License 分发，允许自由使用与再分发。</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,33 @@
+Bilibili 高清下载器 —— 第三方开源软件声明
+============================================
+
+本软件使用了以下开源软件，特此声明并致谢。
+
+1. FFmpeg（GPL v3）
+   - 用途：视频与音频合并
+   - 许可证：GNU General Public License v3（GPL v3）
+   - 本软件以独立进程方式调用 FFmpeg，FFmpeg 与主程序为相互独立的程序，
+     主程序本身不受 GPL 约束。
+   - 完整许可证文本见本目录 ffmpeg\LICENSE 文件。
+   - 版本：9.0.1-essentials_build（www.gyan.dev）
+   - 对应版本源代码获取：https://github.com/FFmpeg/FFmpeg/commit/bf1b838f2a
+     如通过上述链接无法获取，可联系本软件分发者索取完整对应源代码
+     （书面要约，自收到请求起 3 年内有效）。
+
+2. yt-dlp（The Unlicense）
+   - 用途：视频解析与下载
+   - 许可证：The Unlicense（已进入公有领域）
+   - 项目地址：https://github.com/yt-dlp/yt-dlp
+
+3. qrcode-generator（MIT）
+   - 用途：二维码生成
+   - 许可证：MIT License
+   - Copyright (c) 2006 Kazuhiko Arase
+   - 项目地址：https://github.com/kazuhikoarase/qrcode-generator
+
+4. Python（Python Software Foundation License）
+   - 用途：运行环境（由打包工具内置）
+   - 许可证：PSF License
+   - 项目地址：https://www.python.org/
+
+上述各开源软件的完整许可证文本随本软件一同分发，如缺少可联系分发者索取。

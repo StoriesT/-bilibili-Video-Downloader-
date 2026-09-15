@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bilibili 高清下载器</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <h1>Bilibili 高清下载器</h1>
+      <div class="topbar-right">
+        <a class="help-link" href="/help" target="_blank">使用说明</a>
+        <span id="login-badge" class="badge">未登录</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card" id="login-card">
+      <h2>① 登录</h2>
+      <div class="tier">
+        <div class="tier-title">画质说明</div>
+        <div class="tier-row"><span class="tag off">未登录</span>最高只能下载 720P</div>
+        <div class="tier-row"><span class="tag login">已登录</span>解锁 1080P</div>
+        <div class="tier-row"><span class="tag vip">大会员</span>解锁 1080P+ / 4K 内容</div>
+      </div>
+
+      <div id="login-view">
+        <div id="qrcode-box">
+          <img id="qrcode" alt="登录二维码">
+          <div id="qr-overlay" class="overlay hidden">二维码已失效</div>
+        </div>
+        <p id="login-msg" class="msg">正在准备二维码…</p>
+        <button id="btn-login" class="btn primary">刷新二维码</button>
+      </div>
+
+      <div id="loggedin-view" class="hidden">
+        <p class="ok">✅ 已登录：<strong id="uname"></strong></p>
+        <button id="btn-relogin" class="btn">重新登录</button>
+      </div>
+    </section>
+
+    <section class="card" id="download-card">
+      <h2>② 下载</h2>
+      <textarea id="urls" rows="4" placeholder="粘贴视频链接，每行一个，支持批量下载"></textarea>
+      <div class="row">
+        <button id="btn-download" class="btn primary">开始下载</button>
+        <button id="btn-cancel" class="btn danger hidden">取消</button>
+        <button id="btn-open-folder" class="btn">打开下载文件夹</button>
+      </div>
+
+      <div id="progress-box" class="hidden">
+        <div class="progress-track">
+          <div id="progress-bar" class="progress-bar"></div>
+        </div>
+        <div class="meta">
+          <span id="progress-text">准备中…</span>
+          <span id="progress-speed"></span>
+          <span id="progress-eta"></span>
+        </div>
+      </div>
+
+      <pre id="log" class="log"></pre>
+    </section>
+  </main>
+
+  <script src="/static/qrcode.min.js"></script>
+  <script src="/static/app.js"></script>
+</body>
+</html>
